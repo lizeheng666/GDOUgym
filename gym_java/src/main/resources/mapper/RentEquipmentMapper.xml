@@ -22,8 +22,8 @@
         FROM Rent_equipment re INNER JOIN Equipment_rent_standard ers
         ON  ers.`eid` = re.`eid`
         <where>
-            <if test="year!=null and year!=''">and YEAR(rentDate) = #{year} </if>
-            <if test="month!=null and month!=''">MONTH(rentDate) = #{month}</if>
+            <if test="year!=null and year!=''">YEAR(rentDate) = #{year} </if>
+            <if test="month!=null and month!=''">and MONTH(rentDate) = #{month}</if>
         </where>
     </select>
 </mapper>
